@@ -1,0 +1,20 @@
+%p#notice= notice
+
+%p
+  %b Business name:
+  = @card.business_name
+%p
+  %b User:
+  = @card.user_id
+%p
+  = image_tag @card.photo.url(:medium)
+%p
+  %b Message title:
+  = @card.message_title
+%p
+  %b Message description:
+  = @card.message_description
+
+= link_to 'Edit', edit_card_path(@card)
+\|
+= link_to 'Back', cards_path
